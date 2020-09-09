@@ -5,15 +5,54 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
+	.header-top
+		&__phone, &__email
+			a
+				font-size: 16px
 
+	a.modal-btn
+		font-size: 10px
+
+	i.mini-icon
+		width: 16px
+		height: 16px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
-
+	.header-top
+		text-align: left
+		&__phone
+			margin-bottom: 5px
+			a
+				margin-left: 0
+		&__email
+			text-align: left
+		&__btn
+			padding: 15px 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+
+	.header-top
+		padding: 5px 0
+		&__phone, &__email
+			a
+				font-size: 9px
+		&__phone
+			margin-bottom: 0
+		&__btn
+			padding: 10px 0
+
+	a.modal-btn
+		font-size: 6px
+		border: 2px solid #006c58
+		padding: 3px 6px
+
+	i.mini-icon
+		width: 10px
+		height: 10px
+		top: 2px
 	
 	/*Disable Animation on Mobile Devices*/
 	.animated
