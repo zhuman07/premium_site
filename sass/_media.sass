@@ -17,6 +17,12 @@
 		width: 16px
 		height: 16px
 
+	.menu
+		ul
+			li
+				a
+					font-size: 16px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
@@ -30,6 +36,24 @@
 			text-align: left
 		&__btn
 			padding: 15px 0
+
+	.menu
+		ul
+			li
+				margin-right: 30px
+				a
+					font-size: 14px
+
+	.header-bottom
+		padding: 10px 0
+		&__icons
+			a
+				margin-left: 10px
+				&:first-child
+					margin-right: -5px
+		&__icon
+			width: 25px
+			height: 25px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -53,6 +77,11 @@
 		width: 10px
 		height: 10px
 		top: 2px
+
+	.header-middle
+		padding: 25px 0
+		&__title
+			font-size: 18px
 	
 	/*Disable Animation on Mobile Devices*/
 	.animated

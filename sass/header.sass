@@ -23,6 +23,13 @@ body
 			color: $blue
 			text-decoration: none
 
+header
+	position: absolute
+	width: 100%
+	left: 0
+	top: 0
+	background-color: #fff
+
 .header-top
 	background-color: $blue
 	padding: 18px 0
@@ -66,3 +73,75 @@ a.modal-btn
 	transition: all .3s ease
 	&:hover
 		transform: scale(1.1)
+
+.header-middle
+	padding: 35px 0
+	&__title
+		color: $green
+		font-size: 36px
+		text-transform: uppercase
+		font-family: $l_black
+		text-align: center
+		line-height: 1.2
+
+.menu
+	&__icon
+		width: 40px
+		height: 25px
+		position: relative
+		i
+			display: inline-block
+			width: 100%
+			height: 5px
+			background-color: #929090
+			position: absolute
+			left: 0
+			border-radius: 5px
+			&:nth-child(1)
+				top: 0
+			&:nth-child(2)
+				top: 10px
+			&:nth-child(3)
+				top: 20px
+
+	ul
+		list-style: none
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			margin-right: 40px
+			&:last-child
+				margin-right: 0
+			a
+				font-family: $l_bold
+				color: $blue
+				font-size: 20px
+				text-transform: uppercase
+
+.header-bottom
+	padding: 20px 0
+	&__icons
+		text-align: right
+		a
+			display: inline-block
+			margin-left: 20px
+			opacity: .5
+			transition: all .3s ease
+			&:first-child
+				margin-right: -10px
+			&:hover
+				opacity: 1
+	&__icon
+		display: inline-block
+		width: 33px
+		height: 33px
+		background-repeat: no-repeat
+		background-size: contain
+	&__icon_map
+		background-image: url('../img/icons/map_point.png')
+	&__icon_basket
+		background-image: url('../img/icons/basket.png')
+	&__icon_search
+		background-image: url('../img/icons/lupe.png')
+
