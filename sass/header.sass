@@ -28,6 +28,7 @@ header
 	width: 100%
 	left: 0
 	top: 0
+	z-index: 1
 	background-color: #fff
 
 .header-top
@@ -85,7 +86,34 @@ a.modal-btn
 		line-height: 1.2
 
 .menu
-	&__icon
+	padding: 15px 0
+	ul
+		list-style: none
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			margin-right: 40px
+			&:last-child
+				margin-right: 0
+			a
+				font-family: $l_bold
+				color: $blue
+				font-size: 20px
+				text-transform: uppercase
+				transition: all .3s ease
+				display: inline-block
+				&:hover
+					transform: scale(1.1)
+
+.menu-icon
+	padding: 20px 30px 20px 15px
+	display: inline-block
+	position: relative
+	left: -15px
+	&_active
+		background-color: #ebebeb
+	&__inner
 		width: 40px
 		height: 25px
 		position: relative
@@ -104,25 +132,10 @@ a.modal-btn
 			&:nth-child(3)
 				top: 20px
 
-	ul
-		list-style: none
-		margin: 0
-		padding: 0
-		li
-			display: inline-block
-			margin-right: 40px
-			&:last-child
-				margin-right: 0
-			a
-				font-family: $l_bold
-				color: $blue
-				font-size: 20px
-				text-transform: uppercase
-
 .header-bottom
-	padding: 20px 0
 	&__icons
 		text-align: right
+		padding: 15px 0
 		a
 			display: inline-block
 			margin-left: 20px
@@ -144,4 +157,76 @@ a.modal-btn
 		background-image: url('../img/icons/basket.png')
 	&__icon_search
 		background-image: url('../img/icons/lupe.png')
+
+footer
+	background-color: $brown
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	padding: 80px 0
+	z-index: 0
+
+.logotype
+	img
+		max-width: 210px
+
+.social-links
+	margin-top: 40px
+	a
+		display: inline-block
+		margin-right: 15px
+		&:last-child
+			margin-right: 0
+
+.social-icon
+	display: inline-block
+	width: 35px
+	height: 35px
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: 50% 50%
+	&_instagram
+		background-image: url("../img/icons/insta.png")
+	&_facebook
+		background-image: url("../img/icons/fb.png")
+	&_twitter
+		background-image: url("../img/icons/twitter.png")
+	&_vk
+		background-image: url("../img/icons/vk.png")
+	&:hover
+		opacity: .3
+
+.footer-menu
+	list-style: none
+	margin: 0
+	padding: 0
+	li
+		margin-bottom: 8px
+		&:last-child
+			margin-bottom: 0
+		a
+			text-transform: uppercase
+			font-size: 18px
+			color: #fff
+			&:hover
+				text-decoration: underline
+
+.footer-contacts
+	list-style: none
+	margin: 0
+	padding: 0
+	li
+		color: #fff
+		font-size: 19px
+		a
+			color: #fff
+			font-size: 21px
+			margin: 0
+			padding: 0
+			&:hover
+				text-decoration: underline
+
+
+
 
