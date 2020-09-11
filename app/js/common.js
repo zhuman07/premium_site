@@ -13,4 +13,6 @@ $(function() {
 	})
 
 	$('body').css('min-height', $(window).height()+'px');
+
+	$('.main-slide').slick();
 });
