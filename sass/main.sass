@@ -28,29 +28,46 @@ body textarea:required:valid
 	color: #666
 
 //Custom Styles Here
-.main-slide-block
-	position: relative
-	&:before
-		content: ''
-		display: block
-		position: absolute
-		top: 0
-		left: 0
-		background-image: linear-gradient(0deg, rgba(255,255,255,0) 0, rgba(255,255,255,1) 100%)
-		width: 100%
-		height: 100%
-		z-index: 0
 
 .main-slide
 	&__item
 		position: relative
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			background-image: linear-gradient(0deg, rgba(255,255,255,0) 0, rgba(255,255,255,1) 100%)
+			width: 100%
+			height: 100%
+			z-index: 0
 	&__item-img
 		img
-			width: 100%
+			//height: 100%
 	&__item-content
 		position: absolute
 		left: 0
 		top: 50%
+	&__arrow
+		display: inline-block
+		width: 28px
+		height: 81px
+		position: absolute
+		top: 35%
+		z-index: 1
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: 50% 50%
+		&:hover
+			cursor: pointer
+	&__arrow-left
+		background-image: url('../img/icons/arrow-left.png')
+		left: 50px
+	&__arrow-right
+		background-image: url('../img/icons/arrow-right.png')
+		right: 50px
+
 
 
 

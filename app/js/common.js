@@ -14,5 +14,8 @@ $(function() {
 
 	$('body').css('min-height', $(window).height()+'px');
 
-	$('.main-slide').slick();
+	$('.main-slide').slick({
+		prevArrow: '<span class="slick-prev main-slide__arrow main-slide__arrow-left"></span>',
+		nextArrow: '<span class="slick-next main-slide__arrow main-slide__arrow-right"></span>'
+	});
 });
