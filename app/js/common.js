@@ -12,10 +12,25 @@ $(function() {
 		$('.menu').toggle(200);
 	})
 
-	$('body').css('min-height', $(window).height()+'px');
+	//$('body').css('min-height', $(window).height()+'px');
 
 	$('.main-slide').slick({
 		prevArrow: '<span class="slick-prev main-slide__arrow main-slide__arrow-left"></span>',
-		nextArrow: '<span class="slick-next main-slide__arrow main-slide__arrow-right"></span>'
+		nextArrow: '<span class="slick-next main-slide__arrow main-slide__arrow-right"></span>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					arrows: false,
+				}
+			},
+		]
 	});
+
+	$('.review-slider').slick({
+		arrows: false,
+		dots: true
+	});
+
+
 });

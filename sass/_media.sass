@@ -23,6 +23,10 @@
 				a
 					font-size: 16px
 
+	.main-slide
+		&__arrow
+			width: 50px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
@@ -67,11 +71,14 @@
 	.footer-contacts
 		text-align: center
 
+	header.main-page
+		position: static
+
+	.main-slide
+		padding-top: 0
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-
-	header, footer
-		position: static
 
 	.header-top
 		padding: 5px 0
@@ -113,7 +120,72 @@
 				margin: 0
 				padding: 20px 0
 				text-align: center
-	
+
+	.main-slide
+		&__item-content
+			top: 0
+			padding-left: 30px
+			h2
+				font-size: 25px
+				line-height: 1.2
+				margin-bottom: 20px
+			p
+				font-size: 16px
+				margin-bottom: 20px
+
+	.green-btn
+		font-size: 14px
+		padding: 10px 20px
+		margin-bottom: 20px
+
+	.lang-block
+		padding: 50px 0
+		&__title
+			font-size: 25px
+		&__img-block
+			margin: 40px 0
+		&__img
+			width: 220px
+
+	.translate-block
+		padding: 60px 0
+		&__title
+			font-size: 22px
+		&__item
+			height: 130px
+			margin-bottom: 30px
+		&__item-img
+			img
+				height: 55px
+		&__item-text
+			font-size: 14px
+
+	.bureau
+		padding: 50px 0
+		&__title
+			font-size: 28px
+			margin: 0 0 20px 0
+			text-align: center
+			line-height: 1.2
+		&__img
+			img
+				width: 100%
+
+	.main-title
+		font-size: 28px
+		text-align: center
+
+	.review-slider
+		&__item-text
+			font-size: 16px
+		&__item-img
+			text-align: center
+			img
+				max-width: 200px
+
+	#main-map
+		height: 250px
+
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -139,12 +211,13 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
-
+	.main-slide
+		&__item
+			padding-top: 120px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
-
 
 /*==========  Mobile First Method  ==========*/
 
