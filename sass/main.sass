@@ -240,5 +240,62 @@ body textarea:required:valid
 	height: 560px
 	width: 100%
 
+#request-modal
+	background-color: white
+	text-align: left
+	max-width: 1000px
+	margin: 40px auto
+	position: relative
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: 0 50%
+
+.request-modal-form
+	padding: 50px
+	float: right
+	width: 65%
+	background-color: #fff
+	box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.24)
+	h2
+		margin: 0 0 40px 0
+		line-height: .8
+		font-family: $l_bold
+		font-size: 38px
+		color: $black_grey
+	&__group
+		margin-bottom: 40px
+		label
+			display: block
+			font-size: 17px
+			color: $black_grey
+			margin-bottom: 10px
+	&__hint
+		font-family: $r_regular
+		font-size: 14px
+		color: #5e5e5e
+
+.modal-input
+	color: #9d9fa0
+	padding: 10px 20px
+	border: 2px solid #d7d7d7
+	width: 100%
+
+.modal-select
+	color: #9d9fa0
+	border: 2px solid #d7d7d7
+	width: 100%
+	padding: 10px 20px
+	appearance: none
+	background-image: url('../img/icons/drop-down.png')
+	background-repeat: no-repeat
+	background-position: 95% 50%
+	&:focus
+		background-image: url('../img/icons/drop-down-active.png')
+
+.modal-checkbox
+	vertical-align: middle
+	width: 10px
+	height: 10px
+
 //ALWAYS END
 @import "media"
