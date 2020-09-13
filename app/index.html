@@ -306,15 +306,15 @@
 		<form action="" class="request-modal-form">
 			<h2>Оставьте заявку и наши менеджеры свяжутся с Вами!</h2>
 			<div class="request-modal-form__group">
-				<label for="">Имя и Фамилия</label>
+				<label for="" class="request-modal-form__group-label">Имя и Фамилия</label>
 				<input type="text" placeholder="Введите Имя и Фамилию" class="modal-input">
 			</div>
 			<div class="request-modal-form__group">
-				<label for="">Телефон или e-mail</label>
+				<label for="" class="request-modal-form__group-label">Телефон или e-mail</label>
 				<input type="text" placeholder="Введите данные" class="modal-input">
 			</div>
 			<div class="request-modal-form__group">
-				<label for="">Вид услуги</label>
+				<label for="" class="request-modal-form__group-label">Вид услуги</label>
 				<select name="" id="" class="modal-select">
 					<option value="">Выберите категорию</option>
 					<option value="">Категория 1</option>
@@ -322,7 +322,11 @@
 				</select>
 			</div>
 			<div class="request-modal-form__group">
-				<input type="checkbox" class="modal-checkbox"> <span class="request-modal-form__hint">Я даю согласие на сбор и обработку персональных данных</span>
+				<label for="confirm" class="modal-checkbox">
+					<input type="checkbox" class="modal-checkbox__input" id="confirm">
+					<span class="modal-checkbox__checkmark"></span>
+				</label>
+				<label for="confirm" class="request-modal-form__hint">Я даю согласие на сбор и обработку персональных данных</label>
 			</div>
 			<button class="request-modal-form__btn">оставить заявку</button>
 		</form>

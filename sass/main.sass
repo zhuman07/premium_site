@@ -264,15 +264,25 @@ body textarea:required:valid
 		color: $black_grey
 	&__group
 		margin-bottom: 40px
-		label
-			display: block
-			font-size: 17px
-			color: $black_grey
-			margin-bottom: 10px
+	&__group-label
+		display: block
+		font-size: 17px
+		color: $black_grey
+		margin-bottom: 10px
 	&__hint
 		font-family: $r_regular
 		font-size: 14px
 		color: #5e5e5e
+	&__btn
+		background-color: #267968
+		width: 100%
+		border: 2px solid #267968
+		text-transform: uppercase
+		font-size: 20px
+		color: #fff
+		padding: 10px 0
+		&:hover
+			background-color: $green
 
 .modal-input
 	color: #9d9fa0
@@ -285,6 +295,7 @@ body textarea:required:valid
 	border: 2px solid #d7d7d7
 	width: 100%
 	padding: 10px 20px
+	position: relative
 	appearance: none
 	background-image: url('../img/icons/drop-down.png')
 	background-repeat: no-repeat
@@ -293,9 +304,47 @@ body textarea:required:valid
 		background-image: url('../img/icons/drop-down-active.png')
 
 .modal-checkbox
+	display: inline-block
+	position: relative
+	width: 25px
+	height: 25px
+	cursor: pointer
+	font-size: 22px
+	user-select: none
 	vertical-align: middle
-	width: 10px
-	height: 10px
+	margin-right: 20px
+	&:hover &__input ~ &__checkmark
+		background-color: #ccc
+	&__input
+		position: absolute
+		opacity: 0
+		cursor: pointer
+		height: 0
+		width: 0
+		&:checked ~ .modal-checkbox__checkmark
+			background-color: #fff
+		&:checked ~ .modal-checkbox__checkmark:after
+			display: block
+	&__checkmark
+		position: absolute
+		top: 0
+		left: 0
+		height: 25px
+		width: 25px
+		background-color: #fff
+		border: 2px solid #267968
+		&:after
+			content: ""
+			position: absolute
+			display: none
+			left: 9px
+			top: 5px
+			width: 5px
+			height: 10px
+			border: solid $green
+			border-width: 0 3px 3px 0
+			transform: rotate(45deg)
+
 
 //ALWAYS END
 @import "media"
