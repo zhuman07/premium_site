@@ -27,6 +27,10 @@
 		&__arrow
 			width: 50px
 
+	.contact
+		&__block-info
+			padding: 60px 80px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
@@ -76,6 +80,24 @@
 
 	.main-slide
 		padding-top: 0
+
+	.contact
+		&__block
+			float: none
+			width: 100%
+		&__block-info
+			padding: 90px 120px
+		&__block-map
+			height: 550px
+
+	.block-header-text
+		margin-bottom: 40px
+		h2
+			font-size: 24px
+			line-height: 1.4
+		p
+			font-size: 16px
+			padding: 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -212,6 +234,59 @@
 
 	.modal-checkbox
 		margin-right: 10px
+
+	.contact
+		&__block-info
+			padding: 30px
+			h2
+				font-size: 20px
+				text-align: center
+			p
+				font-size: 14px
+				text-align: center
+		&__links
+			margin-top: 50px
+		&__links-item
+			margin-bottom: 20px
+		&__links-item-text
+			width: 210px
+			margin-left: 15px
+			font-size: 12px
+		&__block-map
+			height: 450px
+		&__links-icon
+			width: 30px
+			height: 30px
+			&:after
+				top: 7px
+				left: 6px
+
+	.questions
+		padding: 0
+
+	.questions-tab
+		&__item
+			margin-bottom: 15px
+		&__item-title
+			padding-right: 30px
+			font-size: 13px
+			background-size: 11px 7px
+			background-position: 93% 50%
+		&__item-text
+			font-size: 12px
+
+	.question-form
+		padding: 25px 30px
+		margin: 0 -15px
+		h2
+			font-size: 20px
+		&__btn
+			font-size: 15px
+
+	.question-form-textarea, .question-form-input
+		font-size: 14px
+		margin: 10px 0
+
 
 	/*Disable Animation on Mobile Devices*/
 	.animated

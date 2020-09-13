@@ -45,4 +45,13 @@ $(function() {
 		showCloseBtn: false
 	});
 
+	if($(window).width() > 992){
+		$('#contact-map').height($('#contact-map').parent().height());
+	}
+
+	$('.questions-tab__item-title').on('click', function () {
+		$('.questions-tab__item').removeClass('questions-tab__item_active');
+		$(this).parent('.questions-tab__item').addClass('questions-tab__item_active');
+	});
+
 });
