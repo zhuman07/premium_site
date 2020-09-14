@@ -127,13 +127,10 @@
 	.service-content-nav
 		padding: 0
 		&__item
-			//padding: 30px 30px
+			padding: 25px
+			max-width: 380px
 			a
-				font-size: 18px
-			&_active
-				&:after
-					bottom: -30px
-					left: 42%
+				font-size: 17px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -336,6 +333,17 @@
 			margin-left: 0
 			max-width: 250px
 			display: inline-block
+
+	.service-content-nav
+		margin: 0 -15px
+		&__item
+			padding: 20px
+			a
+				font-size: 16px
+			&_active
+				&:after
+					border-width: 20px 20px 0 20px
+					bottom: -20px
 
 
 	/*Disable Animation on Mobile Devices*/
