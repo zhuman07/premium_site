@@ -1,16 +1,9 @@
 $(function() {
 
-	//SVG Fallback
-	if(!Modernizr.svg) {
-		$("img[src*='svg']").attr("src", function() {
-			return $(this).attr("src").replace(".svg", ".png");
-		});
-	};
-
 	$('.menu-icon').on('click', function () {
 		$(this).toggleClass('menu-icon_active');
 		$('.menu').toggle(200);
-	})
+	});
 
 	//$('body').css('min-height', $(window).height()+'px');
 
@@ -54,4 +47,19 @@ $(function() {
 		$(this).parent('.questions-tab__item').addClass('questions-tab__item_active');
 	});
 
+	$('.service-content-nav').slick({
+		arrows: false,
+		dots: false,
+		infinite: false,
+		slidesToShow: 3,
+		centerMode: true,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
 });

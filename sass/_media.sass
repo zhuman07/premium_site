@@ -99,6 +99,42 @@
 			font-size: 16px
 			padding: 0
 
+	.service-top
+		background-position: 0 -250px
+		padding: 100px 50px 150px 50px
+		&__langs, &__text
+			height: auto
+		&__langs-inner
+			position: static
+			width: 220px
+			margin-left: 140px
+			a
+				margin: 5px
+				img
+					width: 40px
+		&__text
+			margin-top: 50px
+		&__text-inner
+			position: static
+			max-width: 300px
+			text-align: center
+			margin-left: 100px
+			h2
+				font-size: 40px
+			p
+				font-size: 16px
+
+	.service-content-nav
+		padding: 0
+		&__item
+			//padding: 30px 30px
+			a
+				font-size: 18px
+			&_active
+				&:after
+					bottom: -30px
+					left: 42%
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
@@ -287,6 +323,20 @@
 		font-size: 14px
 		margin: 10px 0
 
+	.service-top
+		background-position: -60px -220px
+		padding: 120px 50px 150px 50px
+		&__langs-inner
+			width: 100%
+			margin-left: 0
+		&__text
+			margin-top: 30px
+			text-align: center
+		&__text-inner
+			margin-left: 0
+			max-width: 250px
+			display: inline-block
+
 
 	/*Disable Animation on Mobile Devices*/
 	.animated
@@ -316,6 +366,20 @@
 	.main-slide
 		&__item
 			padding-top: 120px
+
+	.service-top
+		background-position: -170px -220px
+		padding: 120px 20px 100px 20px
+		&__langs-inner
+			width: 100%
+			margin-left: 0
+		&__text
+			margin-top: 30px
+			text-align: center
+		&__text-inner
+			margin-left: 0
+			max-width: 250px
+			display: inline-block
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
