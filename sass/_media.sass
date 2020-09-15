@@ -31,6 +31,15 @@
 		&__block-info
 			padding: 60px 80px
 
+	.service-list
+		&__item
+			height: 400px
+		&__item-inner-content
+			img
+				max-width: 60px
+			h2
+				font-size: 16px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
@@ -131,6 +140,10 @@
 			max-width: 380px
 			a
 				font-size: 17px
+
+	.service-list
+		&__item-img
+			top: 50px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -345,6 +358,62 @@
 					border-width: 20px 20px 0 20px
 					bottom: -20px
 
+	.service-list
+		padding: 30px 0
+		overflow: hidden
+		.slick-list
+			overflow: visible
+		&__item
+			height: auto
+			img
+				width: 100%
+				height: auto
+		&__item-inner
+			padding: 10px
+		&__item-img
+			text-align: center
+			top: 20px
+			img
+				display: inline-block !important
+		&__item-inner-content
+			h2
+				font-size: 14px
+		.slick-current
+			margin-top: -1%
+			img
+				width: 118%
+		.slick-dots
+			list-style: none
+			margin: 0
+			padding: 0
+			text-align: center
+			li
+				display: inline-block
+				width: 12px
+				height: 12px
+				border-radius: 50%
+				border: 1px solid #006c58
+				margin: 0 8px
+				&:hover
+					cursor: pointer
+				button
+					display: none
+			.slick-active
+				background-color: #006c58
+
+	.languages
+		padding: 50px 0
+		&__text
+			h2
+				font-size: 28px
+			p
+				margin: 30px 0 10px 0
+		&__list
+			margin: 30px 0 0 0
+			li
+				margin: 20px
+				img
+					max-width: 100px
 
 	/*Disable Animation on Mobile Devices*/
 	.animated

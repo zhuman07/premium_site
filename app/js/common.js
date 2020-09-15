@@ -68,4 +68,12 @@ $(function() {
 			}
 		]
 	});
+
+	if($(window).width() < 768){
+		$('.service-list').slick({
+			arrows: false,
+			dots: true,
+			centerMode: true,
+		})
+	}
 });
