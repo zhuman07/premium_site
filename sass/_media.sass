@@ -40,6 +40,18 @@
 			h2
 				font-size: 16px
 
+	.about-top
+		&__item
+			&:nth-child(2n)
+				.about-top__item-text
+					padding: 40px 100px
+		&__item-text
+			padding: 40px 50px
+			h2
+				font-size: 40px
+			p
+				font-size: 16px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
@@ -144,6 +156,24 @@
 	.service-list
 		&__item-img
 			top: 50px
+
+	.about-top
+		&__item
+			&:nth-child(2n)
+				.about-top__item-text
+					padding: 30px 80px
+		&__item-text
+			padding: 30px 30px
+			h2
+				font-size: 35px
+			p
+				font-size: 14px
+
+	.about-news
+		padding: 50px 0
+		&__title
+			font-size: 28px
+			line-height: 1.2
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -414,6 +444,47 @@
 				margin: 20px
 				img
 					max-width: 100px
+
+	.about-top
+		&__item
+			&-img
+				width: 100%
+				float: none
+			&-text
+				width: 100%
+				float: none
+			&:nth-child(2n)
+				.about-top__item-img
+					width: 100%
+					float: none
+				.about-top__item-text
+					width: 100%
+					float: none
+					padding: 15px 15px 30px 15px
+		&__item-text
+			padding: 15px 15px 30px 15px
+			h2
+				font-size: 30px
+				text-align: center
+
+
+
+	.about-news-slider
+		margin: 40px -15px
+		&__item
+			margin: 0 10px
+			box-shadow: none
+		&__item-text
+			h2
+				font-size: 20px
+		.slick-list
+			padding: 0 50px !important
+		.slick-dots
+			margin: 40px 0 0 0
+			li
+				width: 10px
+				height: 10px
+				margin: 0 5px
 
 	/*Disable Animation on Mobile Devices*/
 	.animated

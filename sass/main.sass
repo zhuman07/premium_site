@@ -688,5 +688,126 @@ body textarea:required:valid
         &:hover
           transform: scale(1.1)
 
+.about-top
+	&__item
+		&-img
+			width: 50%
+			float: left
+		&-text
+			width: 50%
+			float: right
+		&:nth-child(2n)
+			.about-top__item-img
+				width: 50%
+				float: right
+			.about-top__item-text
+				width: 50%
+				float: left
+				padding: 80px 11%
+	&__item-img
+		img
+			width: 100%
+	&__item-text
+		padding: 80px 7%
+		h2
+			font-size: 45px
+			font-family: $l_bold
+			text-transform: uppercase
+			color: $blue
+			line-height: 1.4
+			margin: 10px 0
+		p
+			font-size: 18px
+			color: $blue
+			line-height: 1.5
+
+.about-news
+	background-color: #f4f1f1
+	padding: 80px 0
+	&__title
+		font-family: $l_bold
+		font-size: 38px
+		color: $blue
+		margin: 0
+		text-align: center
+
+.about-news-slider
+	margin: 50px 0
+	&__item
+		background-color: #fff
+		margin: 0 12px
+		box-shadow: 0px 13px 99px -71px rgba(0,0,0,0.75)
+	&__item-img
+		height: 55%
+		img
+			width: 100%
+	&__item-text
+		padding: 40px
+		position: relative
+		height: 200px
+		h2
+			margin: 0
+			font-family: $l_bold
+			font-size: 22px
+			color: $blue
+			line-height: 1.2
+		a
+			font-family: $m_bold
+			font-size: 12px
+			color: $green
+			display: inline-block
+			padding: 3px 50px
+			border: 2px solid $green
+			position: absolute
+			bottom: 40px
+			left: 40px
+			&:hover
+				background-color: $green
+				color: #fff
+	&__arrow
+		display: inline-block
+		width: 24px
+		height: 100%
+		position: absolute
+		top: 0
+		z-index: 1
+		background-repeat: no-repeat
+		background-size: 24px 65px
+		&:hover
+			cursor: pointer
+			opacity: .5
+	&__arrow-left
+		background-image: url('../img/icons/arrow-left.png')
+		background-position: 100% 40%
+		left: -80px
+	&__arrow-right
+		background-image: url('../img/icons/arrow-right.png')
+		background-position: 0 42%
+		right: -80px
+	.slick-list
+		padding: 0 !important
+	.slick-dots
+		list-style: none
+		margin: 50px 0 0 0
+		padding: 0
+		text-align: center
+		li
+			display: inline-block
+			width: 15px
+			height: 15px
+			border-radius: 50%
+			border: 2px solid #006c58
+			margin: 0 8px
+			&:hover
+				cursor: pointer
+			button
+				display: none
+		.slick-active
+			background-color: #006c58
+
+
+
+
+
 //ALWAYS END
 @import "media"

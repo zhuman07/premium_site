@@ -76,4 +76,37 @@ $(function() {
 			centerMode: true,
 		})
 	}
+
+	$('.about-news-slider').slick({
+		arrows: true,
+		dots: true,
+		infinite: false,
+		slidesToShow: 3,
+		centerMode: true,
+		prevArrow: '<span class="slick-prev about-news-slider__arrow about-news-slider__arrow-left"></span>',
+		nextArrow: '<span class="slick-next about-news-slider__arrow about-news-slider__arrow-right"></span>',
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 2,
+					arrows: false,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+					arrows: false,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+				}
+			}
+		]
+	});
 });
