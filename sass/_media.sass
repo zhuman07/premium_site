@@ -175,6 +175,22 @@
 			font-size: 28px
 			line-height: 1.2
 
+	.about-articles-slider
+		padding: 20px 20px
+		&__item
+			margin: 0 15px
+			//box-shadow: none
+		&__item-text
+			padding: 30px
+			h2
+				font-size: 18px
+			p
+				font-size: 14px
+		&__item-date
+			font-size: 12px
+			left: 30px
+
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
@@ -475,10 +491,26 @@
 			margin: 0 10px
 			box-shadow: none
 		&__item-text
+			padding: 30px
+			min-height: 180px
 			h2
 				font-size: 20px
+			a
+				bottom: 30px
+				left: 30px
 		.slick-list
 			padding: 0 50px !important
+		.slick-dots
+			margin: 40px 0 0 0
+			li
+				width: 10px
+				height: 10px
+				margin: 0 5px
+
+	.about-articles-slider
+		padding: 0
+		&__item
+			margin: 0
 		.slick-dots
 			margin: 40px 0 0 0
 			li
