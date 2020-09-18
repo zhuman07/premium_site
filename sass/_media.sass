@@ -190,6 +190,35 @@
 			font-size: 12px
 			left: 30px
 
+	.order-form-block
+		padding: 30px 40px
+		height: auto
+		&__title
+			font-size: 20px
+		&__group
+			margin: 20px 0
+			label
+				font-size: 14px
+			input
+				font-size: 14px
+
+	.order-form-basket
+		height: auto
+		padding: 30px 80px
+		&__title
+			font-size: 20px
+			margin-bottom: 40px
+		&__group
+			margin: 30px 0
+			input
+				font-size: 14px
+			span
+				font-size: 16px
+		&__result
+			font-size: 18px
+			margin-top: 40px
+			span
+				margin-left: 20px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -518,6 +547,12 @@
 				height: 10px
 				margin: 0 5px
 
+	.order-form
+		padding: 0
+
+	.order-form-basket, .order-form-block
+		margin: 0 -15px
+
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -560,6 +595,9 @@
 			margin-left: 0
 			max-width: 250px
 			display: inline-block
+
+	.order-form-basket
+		padding: 30px 40px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

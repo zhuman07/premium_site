@@ -675,25 +675,7 @@
         <form class="order-form">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-7">
-                        <div class="order-form-block">
-                            <div class="order-form-block__title">Оформить заказ</div>
-                            <div class="order-form-block__group">
-                                <label for="">Ваше имя *</label>
-                                <input type="text" placeholder="Имя">
-                                <input type="text" placeholder="Фамилия">
-                            </div>
-                            <div class="order-form-block__group">
-                                <label for="">Электронная почта *</label>
-                                <input type="text" placeholder="example@mail.ru">
-                            </div>
-                            <div class="order-form-block__group">
-                                <label for="">Телефон *</label>
-                                <input type="text" placeholder="+7 (777) 111-22-33">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-md-push-7">
                         <div class="order-form-basket">
                             <div class="order-form-basket__title">Корзина</div>
                             <div class="order-form-basket__group">
@@ -709,6 +691,23 @@
                             </div>
                         </div>
                     </div>
+					<div class="col-md-7 col-md-pull-5">
+						<div class="order-form-block">
+							<div class="order-form-block__title">Оформить заказ</div>
+							<div class="order-form-block__group order-form-block__group_fullname order-form-block__group_required">
+								<label for="">Ваше имя</label>
+								<input type="text" placeholder="Имя"><input type="text" placeholder="Фамилия">
+							</div>
+							<div class="order-form-block__group order-form-block__group_required">
+								<label for="">Электронная почта</label>
+								<input type="text" placeholder="example@mail.ru">
+							</div>
+							<div class="order-form-block__group order-form-block__group_required">
+								<label for="">Телефон</label>
+								<input type="text" placeholder="+7 (777) 111-22-33">
+							</div>
+						</div>
+					</div>
                 </div>
             </div>
         </form>

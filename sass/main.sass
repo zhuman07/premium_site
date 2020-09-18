@@ -892,9 +892,83 @@ body textarea:required:valid
 		.slick-active
 			background-color: #006c58
 
+.order-form
+	background-color: #f4f1f1
+	padding: 80px 0
 
+.order-form-block
+	background-color: #fff
+	padding: 50px 60px
+	box-shadow: 0 0 14px 3px rgba(0,0,0,0.15)
+	height: 520px
+	&__title
+		font-size: 28px
+		font-family: $l_bold
+		color: #242a2e
+		text-transform: uppercase
+	&__group
+		margin: 30px 0
+		label
+			display: block
+			margin-bottom: 10px
+			font-size: 17px
+			color: #242a2e
+		input
+			display: inline-block
+			width: 100%
+			border: 1px solid #e1e1e1
+			outline: none
+			padding: 10px 20px
+			color: #242a2e
+			&:nth-child(3)
+				border-left: none
+			&::placeholder
+				color: #242a2e
+				opacity: .6
+		&_fullname
+			input
+				width: 50%
+		&_required
+			label
+				&::after
+					content: ' *'
+					color: #fd2424
 
-
+.order-form-basket
+	background-color: #267968
+	padding: 50px 60px
+	box-shadow: 0 0 14px 3px rgba(0,0,0,0.15)
+	height: 520px
+	&__title
+		font-size: 28px
+		font-family: $l_bold
+		color: #fff
+		text-transform: uppercase
+		margin-bottom: 60px
+	&__group
+		margin: 40px 0
+		input
+			display: inline-block
+			width: 100%
+			border: 1px solid #e1e1e1
+			outline: none
+			padding: 10px 20px
+			color: #242a2e
+		span
+			color: #fff
+			font-size: 18px
+			text-transform: uppercase
+			display: inline-block
+			margin-top: 10px
+	&__result
+		font-family: $l_bold
+		font-size: 22px
+		text-transform: uppercase
+		color: #fff
+		margin-top: 60px
+		span
+			display: inline-block
+			margin-left: 25px
 
 //ALWAYS END
 @import "media"
