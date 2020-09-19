@@ -128,4 +128,6 @@ $(function() {
 			}
 		]
 	});
+
+	$('.order-form-payment input[name=paymethod]').che
 });

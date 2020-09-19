@@ -807,6 +807,18 @@ body textarea:required:valid
 
 .about-articles
 	padding: 80px 0
+	&__footer
+		text-align: center
+	&__btn
+		font-family: $m_bold
+		color: $blue
+		display: inline-block
+		border: 3px solid $blue
+		padding: 5px 80px
+		margin-top: 30px
+		transition: all .3s ease
+		&:hover
+			transform: scale(1.1)
 
 .about-articles-slider
 	//margin: 50px 0
@@ -894,13 +906,28 @@ body textarea:required:valid
 
 .order-form
 	background-color: #f4f1f1
-	padding: 80px 0
+	padding: 70px 0
+	&__btn
+		text-align: center
+		margin-top: 40px
+		button
+			font-family: $l_bold
+			color: #fff
+			font-size: 18px
+			background-color: #267968
+			padding: 10px 0
+			width: 80%
+			text-transform: uppercase
+			border: none
+			&:hover
+				background-color: $green
 
 .order-form-block
 	background-color: #fff
 	padding: 50px 60px
 	box-shadow: 0 0 14px 3px rgba(0,0,0,0.15)
-	height: 520px
+	//height: 520px
+	margin: 15px 0
 	&__title
 		font-size: 28px
 		font-family: $l_bold
@@ -925,6 +952,18 @@ body textarea:required:valid
 			&::placeholder
 				color: #242a2e
 				opacity: .6
+		select
+			display: inline-block
+			width: 100%
+			border: 1px solid #e1e1e1
+			outline: none
+			padding: 10px 20px
+			color: #242a2e
+			appearance: none
+			background-image: url('../img/icons/drop-down.png')
+			background-repeat: no-repeat
+			background-position: 95% 75%
+			background-size: 15px 8px
 		&_fullname
 			input
 				width: 50%
@@ -933,12 +972,22 @@ body textarea:required:valid
 				&::after
 					content: ' *'
 					color: #fd2424
+	&__hint
+		font-family: $l_italic
+		font-size: 17px
+		color: #242a2e
+		line-height: 1.2
+		&_required
+			&:before
+				content: '*'
+				color: #267968
 
 .order-form-basket
 	background-color: #267968
 	padding: 50px 60px
 	box-shadow: 0 0 14px 3px rgba(0,0,0,0.15)
 	height: 520px
+	margin: 15px 0
 	&__title
 		font-size: 28px
 		font-family: $l_bold
@@ -969,6 +1018,79 @@ body textarea:required:valid
 		span
 			display: inline-block
 			margin-left: 25px
+
+.order-form-payment
+	background-color: #fff
+	padding: 50px 60px
+	box-shadow: 0 0 14px 3px rgba(0,0,0,0.15)
+	margin: 15px 0
+	&__title
+		margin-bottom: 10px
+		font-size: 17px
+		color: #242a2e
+		&::after
+			content: ' *'
+			color: #fd2424
+	&__list
+		margin-top: 30px
+	&__item
+		width: 45%
+		max-width: 255px
+		max-height: 205px
+		float: left
+		&:nth-child(2n)
+			float: right
+	&__item-img
+		display: inline-block
+		margin-bottom: 20px
+		border: 2px solid #d2d2d2
+		img
+			width: 100%
+	&__item-container
+		display: block
+		position: relative
+		cursor: pointer
+		user-select: none
+		color: #242a2e
+		font-size: 18px
+		&:hover
+			input ~ .checkmark
+				background-color: #ccc
+		input
+			position: absolute
+			opacity: 0
+			cursor: pointer
+			height: 0
+			width: 0
+			&:checked ~ .checkmark
+				background-color: #267968
+			&:checked ~ .checkmark:after
+				display: block
+			&:checked ~ .order-form-payment__item-img
+				border: 2px solid $green
+		.checkmark
+			display: inline-block
+			position: relative
+			height: 20px
+			width: 20px
+			background-color: #d2d2d2
+			border-radius: 50%
+			top: 3px
+			margin-right: 10px
+			&:after
+				content: ""
+				position: absolute
+				display: none
+				left: 7px
+				top: 3px
+				width: 7px
+				height: 12px
+				border: solid #fff
+				border-width: 0 2px 2px 0
+				transform: rotate(45deg)
+
+
+
 
 //ALWAYS END
 @import "media"
