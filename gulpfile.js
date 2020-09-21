@@ -5,7 +5,10 @@ var gulp         = require('gulp'),
 		rename       = require('gulp-rename'),
 		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
-		uglify       = require('gulp-uglify');
+		uglify       = require('gulp-uglify'),
+		imagemin = require('gulp-imagemin'),
+		del = require('del'),
+		newer = require('gulp-newer');
 
 gulp.task('browser-sync', ['styles', 'scripts'], function() {
 		browserSync.init({
@@ -38,8 +41,8 @@ gulp.task('scripts', function() {
 		'./app/libs/bootstrap/js/bootstrap.min.js',
 		'./app/libs/magnific-popup/jquery.magnific-popup.min.js',
 		])
-		.pipe(concat('libs.js'))
-		// .pipe(uglify()) //Minify libs.js
+		.pipe(concat('app.min.js'))
+		.pipe(uglify())
 		.pipe(gulp.dest('./app/js/'));
 });
 
@@ -49,5 +52,28 @@ gulp.task('watch', function () {
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
 	gulp.watch('app/*.html').on('change', browserSync.reload);
 });
+
+gulp.task('cleandist', function () {
+	return del('dist/**/*', { force: true })
+});
+
+gulp.task('images', function () {
+	return gulp.src('app/minimized_images/**/*')
+		.pipe(newer('app/minimized_images/'))
+		.pipe(imagemin())
+		.pipe(gulp.dest('app/minimized_images/'))
+});
+
+gulp.task('buildcopy', function () {
+	return gulp.src([
+		'app/css/**/*.min.css',
+		'app/js/**/*.min.js',
+		'app/minimized_images/**/*',
+		'app/**/*.html',
+	], { base: 'app' })
+		.pipe(gulp.dest('dist'));
+});
+
+gulp.task('build', ['cleandist', 'styles', 'scripts', 'images', 'buildcopy']);
 
 gulp.task('default', ['browser-sync', 'watch']);
