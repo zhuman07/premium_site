@@ -40,6 +40,7 @@ gulp.task('scripts', function() {
 		'./app/libs/slick/slick.min.js',
 		'./app/libs/bootstrap/js/bootstrap.min.js',
 		'./app/libs/magnific-popup/jquery.magnific-popup.min.js',
+		'./app/js/common.js'
 		])
 		.pipe(concat('app.min.js'))
 		.pipe(uglify())
@@ -70,6 +71,7 @@ gulp.task('buildcopy', function () {
 		'app/js/**/*.min.js',
 		'app/minimized_images/**/*',
 		'app/**/*.html',
+		'app/libs/**/*'
 	], { base: 'app' })
 		.pipe(gulp.dest('dist'));
 });
