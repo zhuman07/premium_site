@@ -40,7 +40,7 @@ gulp.task('scripts', function() {
 		'./app/libs/slick/slick.min.js',
 		'./app/libs/bootstrap/js/bootstrap.min.js',
 		'./app/libs/magnific-popup/jquery.magnific-popup.min.js',
-		'./app/js/common.js'
+		//'./app/js/common.js'
 		])
 		.pipe(concat('app.min.js'))
 		.pipe(uglify())
@@ -68,10 +68,11 @@ gulp.task('images', function () {
 gulp.task('buildcopy', function () {
 	return gulp.src([
 		'app/css/**/*.min.css',
-		'app/js/**/*.min.js',
+		'app/js/**/*.js',
 		'app/minimized_images/**/*',
 		'app/**/*.html',
-		'app/libs/**/*'
+		'app/libs/**/*',
+		'app/fonts/**/*'
 	], { base: 'app' })
 		.pipe(gulp.dest('dist'));
 });

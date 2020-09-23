@@ -24,12 +24,6 @@
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
     <script src="libs/jquery/jquery-1.11.2.min.js"></script>
-    <script defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9xO8pPNr4fna-8sX7l3T66hH_WlNkoww&callback=initMap">
-    </script>
-    <script
-            src="https://api-maps.yandex.ru/2.1/?apikey=f20f8f87-eeb7-49a2-8905-e676a4c7622d&lang=ru_RU" type="text/javascript">
-    </script>
 </head>
 
 <body>
@@ -391,63 +385,5 @@
 <script src="js/app.min.js"></script>
 <script src="js/common.js"></script>
 
-<script type="text/javascript">
-    let map;
-    let zoomControl = false;
-    let fullScreenControl = false;
-
-    if($(window).width() > 768){
-        zoomControl = true;
-        fullScreenControl = true;
-    }
-    function initMap() {
-        map = new google.maps.Map(document.getElementById("main-map"), {
-            center: { lat: 51.131606, lng: 71.429759 },
-            zoom: 17.89,
-            zoomControl: zoomControl,
-            zoomControlOptions: {
-                position: google.maps.ControlPosition.LEFT_CENTER
-            },
-            mapTypeControl: false,
-            streetViewControl: false,
-            fullscreenControl: fullScreenControl,
-            fullscreenControlOptions: {
-                position: google.maps.ControlPosition.LEFT_CENTER
-            },
-        });
-    }
-
-    ymaps.ready(init);
-    function init(){
-        var myMap = new ymaps.Map("contact-map", {
-            center: [51.1312181,71.4292034],
-            zoom: 16,
-            controls: []
-        });
-
-        var MyBalloonContentLayoutClass = ymaps.templateLayoutFactory.createClass(
-            '<div class="balloon-layout">улица Динмухамеда<br> Кунаева, 29/1<br> Нур-Султан (Астана), <br>Казахстан</div>'
-        );
-
-        var myPlacemark = new ymaps.Placemark([51.1312181,71.4292034], {
-            //balloonContent: 'улица Динмухамеда<br> Кунаева, 29/1<br> Нур-Султан (Астана), <br>Казахстан',
-            maxWidth: 280
-        }, {
-            preset: 'islands#redSportIcon',
-            iconLayout: 'default#image',
-            iconImageHref: 'minimized_images/icons/red-map-point.png',
-            iconImageSize: [15, 25],
-            balloonContentLayout: MyBalloonContentLayoutClass,
-            hideIconOnBalloonOpen: false,
-            //openBalloonOnClick: false,
-            balloonCloseButton: false,
-            balloonOffset: [-50, 120]
-        });
-        myMap.geoObjects.add(myPlacemark);
-        myPlacemark.balloon.open();
-        myMap.behaviors.disable('scrollZoom');
-    }
-
-</script>
 </body>
 </html>
